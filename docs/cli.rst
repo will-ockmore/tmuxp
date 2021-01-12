@@ -122,11 +122,17 @@ Freeze sessions
 
 ::
 
+    tmuxp freeze
     tmuxp freeze <session_name>
+    tmuxp freeze --force <session_name>
 
 You can save the state of your tmux session by freezing it.
 
 Tmuxp will offer to save your session state to ``.json`` or ``.yaml``.
+
+If no session is specified, it will default to the attached session.
+
+If the `--force` argument is passed, it will overwrite any existing config file with the same name.
 
 .. _cli_load:
 
